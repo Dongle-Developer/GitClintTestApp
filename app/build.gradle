@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.devleop.dongle.gitclinttestapp"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //kotlin dependencies
+    implementation deps.kotlin.kotlin_stdlib
+
+    //androidx & android compat
+    implementation deps.support.appCompat
+    implementation deps.support.core
+    implementation deps.support.constraint
+    implementation deps.support.recyclerView
+    implementation deps.support.cardView
+    implementation deps.support.support
+    implementation deps.support.designSupport
+    implementation deps.support.constraint
+
+    //koin
+    implementation deps.koin.koin_kotlin
+    implementation deps.koin.koin_extended
+    implementation deps.koin.koin_java
+    implementation deps.koin.koin_android
+    implementation deps.koin.koin_android_scope
+    implementation deps.koin.koin_android_viewmodel
+    implementation deps.koin.koin_android_ext
+    implementation deps.koin.koin_ktor
+
+    //reactivex
+    implementation deps.reactivex.rxKotlin
+    implementation deps.reactivex.rxJava
+    implementation deps.reactivex.rxAndroid
+    implementation deps.reactivex.rxBinding
+
+    //retrofit
+    implementation deps.square.retrofit
+    implementation deps.square.gsonConverter
+    implementation deps.square.adapterRxjava2
+    implementation deps.square.okhttp
+    implementation deps.square.okhttpLogging
+    implementation deps.square.glide
+    implementation deps.square.glideComplier
+
+    //google
+    implementation deps.google.gson
+
+
+
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+
+
+

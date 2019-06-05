@@ -1,0 +1,106 @@
+ext {
+    versions =
+            [
+                    'minSdk'         : 18,
+                    'compileSdk'     : 27,
+                    'kotlin_version' : '1.3.31',
+                    'supportVer'     : '27.1.1',
+                    'buildTools'     : '27.0.3',
+                    'constraint'     : '1.1.3',
+                    'androidPlugin'  : '3.4.1',
+                    'archComp'       : '1.1.1',
+                    'androidx'       : '1.0.0',
+                    'androidxComp'   : '1.0.2',
+                    'androidx_test'  : '1.1.0',
+                    'rxKotlin'       : '2.3.0',
+                    'rxJava'         : '2.2.9',
+                    'rxAndroid'      : '2.1.1',
+                    'rxBinding'      : '0.4.0',
+                    'dagger'         : '2.18',
+                    'gson'           : '2.8.5',
+                    'koin_ver'       : '2.0.1',
+                    'retrofit'       : '2.5.0',
+                    'okhttp'         : '3.12.0',
+                    'glide'          : '4.8.0',
+                    'junit'          : '4.12',
+                    'mockito'        : '2.23.4',
+                    'atsl'           : '1.2.0',
+                    'livedataTesting': '1.1.1',
+                    'espressVersion' : '3.1.0',
+                    'androidTest'    : '1.0.2',
+                    'sourceCompat'   : JavaVersion.VERSION_1_8,
+                    'targetCompat'   : JavaVersion.VERSION_1_8
+            ]
+
+    deps =
+            [
+                    android  : [
+                            'gradlePlugin'   : "com.android.tools.build:gradle:${versions.androidPlugin}",
+                            'lifecycleExt'   : "android.arch.lifecycle:extensions:${versions.archComp}",
+                            'lifecycleCommon': "android.arch.lifecycle:common-java8:${versions.archComp}",
+                    ],
+                    kotlin   : [
+                            'kotlin_plugin': "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin_version}",
+                            'kotlin_stdlib': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin_version}"
+                    ],
+                    support  : [
+                            'appCompat'    : "androidx.appcompat:appcompat:${versions.androidxComp}",
+                            'core'         : "androidx.core:core-ktx:${versions.androidxComp}",
+                            'recyclerView' : "androidx.recyclerview:recyclerview:${versions.androidx}",
+                            'cardView'     : "androidx.cardview:cardview:${versions.androidx}",
+                            'support'      : "androidx.legacy:legacy-support-v4:${versions.androidx}",
+                            'designSupport': "com.android.support:design:${versions.supportVer}",
+                            'constraint'   : "com.android.support.constraint:constraint-layout:${versions.constraint}"
+                    ],
+                    google   : [
+                            'dagger'         : "com.google.dagger:dagger:${versions.dagger}",
+                            'daggerCompiler' : "com.google.dagger:dagger-compiler:${versions.dagger}",
+                            'daggerAndroid'  : "com.google.dagger:dagger-android:${versions.dagger}",
+                            'daggerSupport'  : "com.google.dagger:dagger-android-support:${versions.dagger}",
+                            'daggerProcessor': "com.google.dagger:dagger-android-processor:${versions.dagger}",
+                            'gson'           : "com.google.code.gson:gson:${versions.gson}"
+                    ],
+                    koin     : [
+                            'koin_kotlin'           : "org.koin:koin-core:${versions.koin_ver}",
+                            'koin_extended'         : "org.koin:koin-core-ext:${versions.koin_ver}",
+                            'koin_java'             : "org.koin:koin-java:${versions.koin_ver}",
+                            'koin_android'          : "org.koin:koin-android:${versions.koin_ver}",
+                            'koin_android_scope'    : "org.koin:koin-android-scope:${versions.koin_ver}",
+                            'koin_android_viewmodel': "org.koin:koin-android-viewmodel:${versions.koin_ver}",
+                            'koin_android_ext'      : "org.koin:koin-android-ext:${versions.koin_ver}",
+                            'koin_ktor'             : "org.koin:koin-ktor:${versions.koin_ver}"
+                    ],
+                    reactivex: [
+                            'rxKotlin' : "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlin}",
+                            'rxJava'   : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+                            'rxAndroid': "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
+                            'rxBinding': "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${versions.rxBinding}"
+                    ],
+                    square   : [
+                            'retrofit'      : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                            'gsonConverter' : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+                            'adapterRxjava2': "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
+                            'okhttp'        : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+                            'okhttpLogging' : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+                            'glide'         : "com.github.bumptech.glide:glide:${versions.glide}",
+                            'glideComplier' : "com.github.bumptech.glide:compiler:${versions.glide}",
+                    ],
+                    test     : [
+                            'junit'            : "junit:junit:${versions.junit}",
+                            'androidTestRules' : "androidx.test:runner:${versions.atsl}",
+                            'androidTestRunner': "androidx.test:rules:${versions.atsl}",
+                            'mockWebServer'    : "com.squareup.okhttp3:mockwebserver:${versions.okhttp}",
+                            'retrofitMock'     : "com.squareup.retrofit2:retrofit-mock:${versions.retrofit}",
+                            'mockAndroid'      : "org.mockito:mockito-android:${versions.mockito}",
+                            'mockCore'         : "org.mockito:mockito-core:${versions.mockito}",
+                            'livedataTesting'  : "android.arch.core:core-testing:${versions.livedataTesting}",
+                            'koin_test'        : "org.koin:koin-test:${versions.koin_ver}",
+                            'espressoCore'     : "androidx.test.espresso:espresso-core:${versions.espressVersion}",
+                            'espressoContrib'  : "androidx.test.espresso:espresso-contrib:${versions.espressVersion}",
+                            'espressoIntents'  : "androidx.test.espresso:espresso-intents:${versions.espressVersion}",
+                    ]
+
+            ]
+
+}
+
