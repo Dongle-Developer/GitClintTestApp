@@ -11,5 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.i("dev11","11")
+        Log.i("dev22","22")
     }
 }
+
