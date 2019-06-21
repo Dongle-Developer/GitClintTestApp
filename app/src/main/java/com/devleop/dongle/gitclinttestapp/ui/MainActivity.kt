@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Log.i("11","11")
         Log.i("22","22")
+        Log.i("33","33")
     }
 }
 
