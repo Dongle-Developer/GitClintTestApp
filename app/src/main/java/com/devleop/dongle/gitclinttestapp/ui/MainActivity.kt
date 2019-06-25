@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         Log.i("11","11")
         Log.i("22","22")
         Log.i("33","33")
+        Log.i("dev44","44")
     }
 }
 
