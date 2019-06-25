@@ -10,13 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.i("dev11","11")
-        Log.i("dev22","22")
-        Log.i("dev33","33")
-        Log.i("11","11")
-        Log.i("22","22")
-        Log.i("33","33")
-        Log.i("dev44","44")
     }
 }
 
