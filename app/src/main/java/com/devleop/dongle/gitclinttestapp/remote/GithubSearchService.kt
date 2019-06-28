@@ -15,3 +15,4 @@ interface GithubSearchService {
     fun getUserRepositoryData(@Path("userName") userName: String): Single<List<GitRepositoryData>>
 }
 
+
